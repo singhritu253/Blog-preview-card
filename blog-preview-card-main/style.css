@@ -1,0 +1,182 @@
+:root{
+    /* primary-clr */
+    --primary-clr: hsl(47, 88%, 63%);
+
+    /* seacondary clr/natural */
+    --natural-clr: hsl(0, 0%, 100%); 
+     --seacondry-clr: hsl(0, 0%, 50%); 
+      --seacodry-dark-clr: hsl(0, 0%, 7%);
+
+      /* font-family */
+    --ffamily: "Figtree", sans-serif;
+
+    /* font-weight */
+    --fweight:700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+   
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* genral styling */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ffamily);
+    background-color: var(--primary-clr);
+    position: absolute;
+    margin: auto;
+    inset: 0;
+}
+
+.blog__preview-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    border: 2px solid var(--seacondry-clr);
+    box-shadow: 8px 7px 0px;
+    margin: 0 2rem 0 1.3rem;
+    border-radius: 0.9rem;
+    background-color: var(--natural-clr);
+}
+
+.blog__card-img img{
+  border-radius: 0.5rem;
+}
+
+ .blog__card-info{
+    margin: 0.5rem 0;
+ }
+
+ button{
+    border: none;
+    font-size: 0.6rem;
+    text-decoration: none;
+    color: var(--seacodry-dark-clr);
+    font-weight: var(--fweight);
+    padding: 4px 18px;
+    background-color: var(--primary-clr);
+    border-radius: 0.2rem;
+ }
+
+ small{
+    font-size: 0.5rem;
+    color: var(--seacondry-clr);
+    font-weight: var(--fweight);
+ }
+
+ .card__name {
+    font-size: 1.1rem;
+    color: var(--seacodry-dark-clr);
+   line-height: 2.4rem;
+   font-weight: var(--fweight);
+ }
+
+ .card__name:hover{
+  color: var(--primary-clr);
+ }
+
+ .card__about{
+    font-size: 0.7rem;
+    color: var(--seacondry-clr);
+    line-height: 1rem;
+ }
+
+ .person-about{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.9rem;
+ }
+
+ .person-about img {
+    height: 30px;
+ }
+
+ .person-about span{
+    font-size: 0.6rem;
+    color: var(--seacodry-dark-clr);
+    font-weight: var(--fweight);
+ }
+
+ /* media query */
+ @media (max-width:285px){
+   .blog__preview-card h1{
+    font-size: 0.9rem;
+   }
+
+   .card__about{
+    font-size: 0.6rem;
+   }
+ }
+
+ @media (min-width:388px){
+     .blog__preview-card{
+      width: 290px;
+     }
+ }
+
+
